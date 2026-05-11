@@ -44,7 +44,7 @@ st.set_page_config(
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 _BASE            = os.path.dirname(os.path.abspath(__file__))
-CLEANED_CSV_PATH = os.path.join(_BASE, "cleaned_jobs for project.csv")
+CLEANED_CSV_PATH = os.path.join(_BASE, "cleaned_jobs.csv")
 DB_PATH          = os.path.join(_BASE, "schema.sql")
 
 # ── Label map ─────────────────────────────────────────────────────────────────
@@ -216,6 +216,7 @@ div.stButton>button:hover{background:var(--accent)!important;transform:translate
     border-radius:10px!important;border:1.5px solid var(--border)!important;}
 .stTextInput>div>input:focus,.stTextArea>div>textarea:focus{
     border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(232,115,74,.15)!important;}
+
 
 /* ── Table ── */
 table{width:100%;border-collapse:collapse;font-size:.86rem;}
@@ -578,7 +579,7 @@ def page_home():
         <div class="hero-pill"><strong>{len(df):,}</strong> listings</div>
         <div class="hero-pill"><strong style="color:#4ade80">{real_n:,}</strong> real jobs</div>
         <div class="hero-pill"><strong style="color:#f87171">{fake_n:,}</strong> fake detected</div>
-        <div class="hero-pill"><strong>SGD/PAC</strong> model</div>
+        <div class="hero-pill"><strong>PAC</strong> model</div>
         <div class="hero-pill"><strong>TF-IDF</strong> search</div>
       </div>
     </div>""", unsafe_allow_html=True)
